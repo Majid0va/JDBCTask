@@ -26,7 +26,7 @@ public class Methods {
         try (Connection connection = DriverManager.getConnection(JDBC_URL)) {
             PreparedStatement preparedStatement = connection.prepareStatement("insert into employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) values( ?,?,?, ?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
 
-            preparedStatement.setInt(1, employees.getManagerId());
+            preparedStatement.setLong(1, employees.getEmployeeId());
             preparedStatement.setString(2, employees.getFirstName());
             preparedStatement.setString(3, employees.getLastName());
             preparedStatement.setString(4, employees.getEmail());
