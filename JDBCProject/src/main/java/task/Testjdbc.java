@@ -14,9 +14,9 @@ public class Testjdbc {
         employees.setManagerId(101);
         employees.setDepartmentId(11);
 
-//        Methods.printStatements();
+        Methods.printStatements();
 
-        Methods.insertNewEmployee(employees);
+//        Methods.insertNewEmployee(employees);
 
 //        Methods.insertNewDepartmentsBatch();
 
