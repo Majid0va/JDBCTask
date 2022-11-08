@@ -55,7 +55,7 @@ public class Methods {
     //Task3
     public static void insertNewDepartmentsBatch() {
         try (Connection connection = DriverManager.getConnection(JDBC_URL)) {
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into departments(department_id, department_name, location_id) values (?,?,?,?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into departments(department_id, department_name, location_id) values (?,?,?)");
             preparedStatement.setLong(1, 12L);
             preparedStatement.setString(2, "Back-end");
             preparedStatement.setDouble(3, 1800);
